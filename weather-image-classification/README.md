@@ -1,10 +1,12 @@
 # Weather images classification
 
-This project is aimed to classify type of weather depicted in image.
+This project aims to classify type of weather depicted in image.
 
 To achieve this goal, two models were trained: custom CNN network and VGG16 network with weights pretrained on ImageNet dataset. 
 
 Both models were then also trained using augemented data (rotation, zoom, shift, flip). 
+
+Creating, hypertuning the parameters of the models, training, evaluationg, generating results is shown in `CCN_training.ipynb` file.
 
 ## Data
 
@@ -15,9 +17,9 @@ Dataset details: Ajayi, Gbeminiyi (2018), “Multi-class Weather Dataset for Ima
 Exemplary images:
 ||
 |---|
-|<img src="assets/images.png" width="450" height="450">|
+|<img src="assets/images.png">|
 
-Augmented images are stored in `augmented` folder.
+Augmented images are stored in `augmented_images` folder.
 
 Exemplary augmented images:
 |   |   |   |   |
@@ -28,10 +30,10 @@ Exemplary augmented images:
 
 | Model | Accuracy | Confusion matrix |
 | --- | --- | --- |
-| VGG16 | 0.93 | <img src="assets/vgg16_confusion_matrix.png" width="250" height="250"> |
-| VGG16 with augmented images | 0.92 | <img src="assets/vgg16_aug_confusion_matrix.png" width="250" height="250"> |
-| CNN | 0.91 | <img src="assets/cnn_confusion_matrix.png" width="250" height="250"> |
-| CNN with augmented images | 0.96 | <img src="assets/aug_confusion_matrix.png" width="250" height="250"> |
+| VGG16 | 0.93 | <img src="assets/vgg16_confusion_matrix.png" width="450" height="450"> |
+| VGG16 with augmented images | 0.92 | <img src="assets/vgg16_aug_confusion_matrix.png" width="450" height="450"> |
+| CNN | 0.91 | <img src="assets/cnn_confusion_matrix.png" width="450" height="450"> |
+| CNN with augmented images | 0.96 | <img src="assets/aug_confusion_matrix.png" width="450" height="450"> |
 
 ### How to run
 
