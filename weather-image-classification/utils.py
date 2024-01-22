@@ -11,12 +11,16 @@ def save_history(history, model_name):
     """
     Saves the history of the model to the disk.
     """
-    with open(os.path.join("training_histories", f"{model_name}_history.pkl"), "wb") as file:
+    with open(
+        os.path.join("training_histories", f"{model_name}_history.pkl"), "wb"
+    ) as file:
         pickle.dump(history, file)
 
 
 def load_history_from_file(model_name):
-    with open(os.path.join("training_histories", f"{model_name}_history.pkl"), "rb") as file:
+    with open(
+        os.path.join("training_histories", f"{model_name}_history.pkl"), "rb"
+    ) as file:
         history = pickle.load(file)
     return history
 
@@ -59,9 +63,16 @@ def plot_confusion_matrix(test_labels, predictions, title, classes_names):
     Plots the confusion matrix of the model.
     """
     cm = confusion_matrix(test_labels, predictions)
-    cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
+    cm = cm.astype("float") / cm.sum(axis=1)[:, np.newaxis]
     fig, ax = plt.subplots(figsize=(5, 5))
-    sns.heatmap(cm, ax=ax, annot=True, xticklabels=classes_names, yticklabels=classes_names, cmap="Blues")
+    sns.heatmap(
+        cm,
+        ax=ax,
+        annot=True,
+        xticklabels=classes_names,
+        yticklabels=classes_names,
+        cmap="Blues",
+    )
     plt.title(title)
     plt.ylabel("True label")
     plt.xlabel("Predicted label")
