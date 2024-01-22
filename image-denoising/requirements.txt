@@ -1,0 +1,4 @@
+matplotlib==3.8.0
+seaborn==0.13.1
+torch==2.0.0.post4
+torchvision==0.15.2a0
