@@ -11,8 +11,8 @@ It is corrupted by adding gaussian noise $\mathcal{N}\left(\mu=0, \,\sigma=0.2\r
 
 |   |
 |---|
-|![](images\noisy.png)   |
-|![](images\denoised.png)|
+|![](images/noisy.png)   |
+|![](images/denoised.png)|
 
 ## Requirements
 
