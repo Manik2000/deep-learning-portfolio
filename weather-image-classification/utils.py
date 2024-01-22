@@ -4,23 +4,7 @@ import pickle
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
-from keras.models import load_model
 from sklearn.metrics import confusion_matrix
-
-
-def save_model(model, model_name):
-    """
-    Saves the model to the disk.
-    """
-    model.save(os.path.join("models", f"{model_name}.h5"))
-
-
-def load_model_from_file(model_name):
-    """
-    Loads the model from the disk.
-    """
-    model = load_model(os.path.join("models", f"{model_name}.h5"))
-    return model
 
 
 def save_history(history, model_name):
@@ -29,6 +13,7 @@ def save_history(history, model_name):
     """
     with open(os.path.join("training_histories", f"{model_name}_history.pkl"), "wb") as file:
         pickle.dump(history, file)
+
 
 def load_history_from_file(model_name):
     with open(os.path.join("training_histories", f"{model_name}_history.pkl"), "rb") as file:
@@ -67,6 +52,7 @@ def plot_training_history(history_dict, title):
     plt.suptitle(title)
 
     plt.show()
+
 
 def plot_confusion_matrix(test_labels, predictions, title, classes_names):
     """
